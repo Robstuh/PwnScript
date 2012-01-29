@@ -1,4 +1,4 @@
-#Engine by Robbie
+#Tick script by Robbie
 from org.pwnxile.core import Script
 
 def world_tick(engine):
