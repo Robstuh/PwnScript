@@ -14,4 +14,3 @@ def command_players(player):
 def command_printstaff(player):
 	for value in Staff.getStaffList():
 		player.sendMessage(value.playerName)
-				
