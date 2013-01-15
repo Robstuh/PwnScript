@@ -1,10 +1,5 @@
-from com.pwnxile.core import World
-
 # Made by Robbie
-# Quest seems flawless at present
-# Bugs will undoubtedly be discovered
-
-#Release date: 20th December 2012
+# Release date: 20th December 2012
 
 santa_id = 1552
 diango_id = 970
@@ -13,13 +8,19 @@ thief_key_item = 432
 xmas_present = 6542
 diango_shop_id = 39
 
+def quest_button_0(player):
+	quest_stage = player.getQuest(0).getStage()
+	if quest_stage == 6:
+		player.boxMessage("I have completed the @dre@Christmas Crime@bla@ quest.")
+	else:
+		player.boxMessage("This quest can only be completed during December.")
+
 def configure_quest_0():
 	quest_id = 0 #unique id for quest
 	quest_name = 'A Christmas Crime' #name of quest
 	quest_stages = 6 #final stage id when quest is completed
-	
 	World.addQuest(quest_id, quest_name, quest_stages)
-	World.addNonCombatNpc(santa_id, 3079, 3504, 0, 1)
+	# World.addNonCombatNpc(santa_id, 3079, 3504, 0, 1)
 	World.addNonCombatNpc(diango_id, 3080, 3250, 0, 1)
 	World.addCombatNpc(thief_id, 3097, 3260, 0, 0, 200, 9, 30, 120)
 	World.addObject(2183, 3093, 3240)
