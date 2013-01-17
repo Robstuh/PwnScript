@@ -5,7 +5,10 @@ my_shop = Shop("Fur Stall", 45)
 my_shop.addItem(ShopItem(948, 10))
 my_shop.addItem(ShopItem(958, 10))
 
-World.addNonCombatNpc(573, 3085, 3497, 0, 1)
+fur_trader = World.addNonCombatNpc(573, 3085, 3497, 0, 1)
+
+def first_click_npc_573(player):
+	fur_trader.forceChat("Not right now " + str(player.playerName) + ".")
 
 def second_click_npc_573(player):
 	player.getShop().openShop(45)
