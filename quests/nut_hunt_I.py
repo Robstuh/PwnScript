@@ -10,7 +10,7 @@ def configure_quest_1():
 	quest_name = 'Nut Hunt I' # name of quest
 	quest_stages = 2 # final stage id when quest is completed
 	World.addQuest(quest_id, quest_name, quest_stages)
-	World.addNonCombatNpc(monkeys_uncle_id, 3084, 3501, 0, 0)
+	# World.addNonCombatNpc(monkeys_uncle_id, 3084, 3501, 0, 0)
 	World.addObject(dark_hole, 3090, 3498)
 	
 def first_click_object_5947(player):

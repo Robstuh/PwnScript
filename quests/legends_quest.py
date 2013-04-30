@@ -21,8 +21,8 @@ def configure_quest_3():
     quest_name = 'Legends Quest'
     quest_stages = 5
     World.addQuest(quest_id, quest_name, quest_stages)
-    World.addNonCombatNpc(king_roald_id, 3213, 3463, 0, 1)
-    World.addCombatNpc(demon_id, 2947, 2898, 0, 1, 250, 35, 120, 120)
+    World.addNonCombatNpc(king_roald_id, 3222, 3476, 0, 1)
+    World.addCombatNpc(demon_id, 3228, 3368, 0, 1, 250, 40, 150, 150)
     #World.addCombatNpc(demon_id, 2956, 2910, 0, 1) #If more than one demon is to be added in the jungle
     #World.addCombatNpc(demon_id, 2964, 2922, 0, 1) #If more than one demon is to be added in the jungle
     
@@ -46,11 +46,10 @@ def kill_npc_934(player):
     if quest_stage == 3:
         player.getQuest(3).setStage(4)
         player.addItem(burnt_bones_id)
-        player.sendMessage("I better bring the bones to King Roald.")
-        player.getFunction().startTeleport2(3094, 3470, 0)
+        player.playerChat("I better take the bones to King Roald")	
 
 def click_item_528(player):
-    player.playerChat("I better bring the bones to King Roald")	
+    player.playerChat("I better take the bones to King Roald")	
 
 def first_click_npc_648(player):
     smithing_level = player.getLevel("smithing")

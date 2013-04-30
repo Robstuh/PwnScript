@@ -1,3 +1,12 @@
+#==============================================================================
+#title           : Donor content script
+#description     : A script to handle donor related game content
+#author          : Unknown
+#date            : 24/1/2013
+#version         : 1.3
+#notes           : Finished
+#==============================================================================
+
 from com.pwnxile.core import World
 from com.pwnxile.rs2 import Position
 from com.pwnxile.rs2 import Location
@@ -14,13 +23,13 @@ def first_click_npc_554(player):
 def second_click_npc_554(player):
 	player.getShop().openShop(40)
 
-def first_click_object_2156(player): # Click the donor portal
+def first_click_object_2156(player):
 	if player.isDonator():
 		player.teleport(Position.DONOR_ISLAND_SPAWN)
 	else:
 		player.boxMessage("You must be a donator to use this portal.")
 		
-def is_on_island(player): # Check player is on the island
+def is_on_island(player):
 	if donor_island.isInLocation(player):
 		return True
 	return False

@@ -6,7 +6,7 @@ def wear_item_9813(player):
 		player.getItems().wearItem(player.wearId, player.wearSlot)
 
 def wear_item_4587(player):
-	if player.getQuest(35).getStage < 15:
+	if player.getQuest(35).getStage() < 15:
 		player.boxMessage("You must have completed Monkey Madness to wield a Dragon Scimitar.")
 	else:
 		player.getItems().wearItem(player.wearId, player.wearSlot)
